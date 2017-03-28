@@ -2,7 +2,7 @@
 A boilerplate used to create a basic email using html tables. The file index.html includes various layouts and options when creating an email. The file base.html is a stripped down template and can be used as a starting point. 
 
 <h3>Styles</h3>
-```html
+
 <style>
 	
 	@media screen and (max-width: 600px) {
@@ -67,7 +67,6 @@ A boilerplate used to create a basic email using html tables. The file index.htm
 	}
 
 </style>
-```
 
 <h3>Getting Started</h3>
 <ul>
