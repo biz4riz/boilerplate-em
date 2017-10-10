@@ -134,30 +134,46 @@ Example:
 	<tr>
 		<td>
 			<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-
-				// Adding valign="top" keeps the bullet at the top of the list item when it spans more than one line 
-				<tr valign="top">
-				
-					// Bullet column - the use of image bullets is perfectly acceptable as long as you follow the image formatting rules
-					// Adding width to bullet column for spacing between this and the list item
-				
-					<td width="10">&bull;</td>
-					<td style="color:#141414; font-family:Arial, Helvetica, sans-serif; font-size:16px;">
-						<p style="line-height:22px; margin:0;">[LIST ITEM]</p>
+				<tr>
+					<td>
+						// Must use a nested table to avoid colspan issues
+						<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							// Adding valign="top" keeps the bullet at the top of the list item when it spans more than one line 
+							<tr valign="top">
+								// Bullet column - the use of image bullets is perfectly acceptable as long as you follow the image formatting rules
+								// Adding width to bullet column for spacing between this and the list item
+								<td width="10">&bull;</td>
+								<td style="color:#141414; font-family:Arial, Helvetica, sans-serif; font-size:16px;">
+									<p style="line-height:22px; margin:0;">Ultricies Dapibus Purus</p>
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 				<tr><td height="5" style="font-size:5px; line-height:5px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
-				<tr valign="top">
-					<td width="10">&bull;</td>
-					<td style="color:#141414; font-family:Arial, Helvetica, sans-serif; font-size:16px;">
-						<p style="line-height:22px; margin:0;">[LIST ITEM]</p>
+				<tr>
+					<td>
+						<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr valign="top">
+								<td width="10">&bull;</td>
+								<td style="color:#141414; font-family:Arial, Helvetica, sans-serif; font-size:16px;">
+									<p style="line-height:22px; margin:0;">Ultricies Dapibus Purus</p>
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 				<tr><td height="5" style="font-size:5px; line-height:5px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
-				<tr valign="top">
-					<td width="10">&bull;</td>
-					<td style="color:#141414; font-family:Arial, Helvetica, sans-serif; font-size:16px;">
-						<p style="line-height:22px; margin:0;">[LIST ITEM]</p>
+				<tr>
+					<td>
+						<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr valign="top">
+								<td width="10">&bull;</td>
+								<td style="color:#141414; font-family:Arial, Helvetica, sans-serif; font-size:16px;">
+									<p style="line-height:22px; margin:0;">Ultricies Dapibus Purus</p>
+								</td>
+							</tr>
+						</table>
 					</td>
 				</tr>
 			</table>
