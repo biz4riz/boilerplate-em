@@ -202,7 +202,16 @@ HTML buttons do render a bit differently in each email client. The differences a
 Example:
 
 ```html
-<a href="#" style="background-color:transparent; border:1px solid #141414; border-radius:4px; color:#141414; display:inline-block; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; line-height:40px; text-align:center; text-decoration:none; width:200px; -webkit-text-size-adjust:none; mso-hide:all;">[BUTTON TEXT]</a>
+<tr>
+	<td>
+        <div class="button-container" align="center">
+            <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://www.futuredontics.com/lftmtp_CD-NL-20436" style="height:27.75pt; width:285.75pt; v-text-anchor:middle;" arcsize="14%" stroke="false" fillcolor="#fc8900"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:18px"><![endif]--><a href="http://www.futuredontics.com/lftmtp_CD-NL-20436" target="_blank" style="-webkit-text-size-adjust: none; text-decoration: none; display: block; color: #ffffff; background-color: #fc8900; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; width: 70%; width: 70%; border-top: 0px solid #ff6c6c; border-right: 0px solid #ff6c6c; border-bottom: 0px solid #ff6c6c; border-left: 0px solid #ff6c6c; padding-top: 0px; padding-bottom: 0px; font-family: Helvetica, Arial, sans-serif; text-align: center; mso-border-alt: none; word-break: keep-all;"><span style="padding-left:0px;padding-right:0px;font-size:18px;display:inline-block;">
+                    <span style="font-size: 12px; line-height: 24px;"><span style="font-size: 18px; line-height: 36px;"><strong>FREE DOWNLOAD</strong></span></span>
+                </span></a>
+            <!--[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->
+        </div>
+	</td>
+</tr>
 ```
 
 <h3>Spacing</h3>
@@ -321,5 +330,4 @@ Example:
 		</table>
 	</td>
 ```
-
 
