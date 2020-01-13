@@ -202,17 +202,19 @@ HTML buttons do render a bit differently in each email client. The differences a
 Example:
 
 ```html
-<tr>
-	<td align="center">
-		<div>
-				<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-spacing:0; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td style="padding-top:14px; padding-right:15px; padding-bottom:14px; padding-left:15px" align="center"><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="#" style="height:50pt; width:235pt; v-text-anchor:middle;" arcsize="14%" stroke="false" fillcolor="#cccccc"><w:anchorlock/><v:textbox inset="0,0,0,0"><center style="color:#ffffff; font-family:Arial, sans-serif; font-size:15px"><![endif]-->
-					<a href="#" target="_blank" style="-webkit-text-size-adjust:none; text-decoration:none; display:block; color:#ffffff; background-color:#cccccc; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; width:235px; border-top:0px solid #cccccc; border-right:0px solid #cccccc; border-bottom:0px solid #cccccc; border-left:0px solid #cccccc; padding-top:14px; padding-bottom:14px; font-family:Arial,Helvetica,sans-serif; text-align:center; mso-border-alt:none; word-break:keep-all;">
-						<span style="display:inline-block; font-size:15px; line-height:22px; text-transform:uppercase;"><strong>HTML Button</strong></span>
-					</a>
-				<!--[if mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]-->
-		</div>
-	</td>
-</tr>
+  <tr>
+    <td align="center">
+      <div>
+	<!--[if mso]>
+	  <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://litmus.com" style="height:37px;v-text-anchor:middle;width:146px;" arcsize="40%" strokecolor="#d31245" fillcolor="#ffffff">
+	    <w:anchorlock/>
+	    <center style="color:#d31425;font-family: Helvetica, Arial, sans-serif;font-size:14px;">FALLBACK</center>
+	  </v:roundrect>
+	<![endif]-->
+	<a href="http://buttons.cm" style="background-color:#ffffff;border:1px solid #d31245;border-radius:30px;color:#d31245;display:inline-block;font-family: Helvetica, Arial, sans-serif;font-size:16px;line-height:44px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none;mso-hide:all;">BULLETPROOF</a>
+      </div>
+    </td>
+  </tr>
 ```
 
 <h3>Spacing</h3>
