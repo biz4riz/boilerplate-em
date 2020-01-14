@@ -79,8 +79,8 @@ A boilerplate used to create a basic email using html tables. The file index.htm
 	<li>
 		Simple sematics count
 		<ul>
-			<li><b>Strong tags:</b> The ```html<strong>``` tag is not supported by older email clients use the ```html<b>``` tag instead.</li>
-			<li>The ```html<ul>``` isn't supported very well in email clients such as Outlook and should be avoided and replaced with ```html&bull;``` for each point in the list.</li>
+			<li><b>Strong Tags:</b> The strong tag is not supported by older email clients use the bold tag instead.</li>
+			<li><b>Ordered and Unordered List Items</b> aren't supported in all email clients. Use nested tables to accomplish this that include a bullet character for each point in the list instead. (See Lists Example Below) /li>
 		</ul>
 	</li>
 <li>Test the email. It is a must to preview the coded email within all email clients before confidently sending out a campaign. <a href="https://www.emailonacid.com/" target="_blank">Email on ADid</a> and <a href="https://litmus.com/" target="_blank">Litmus</a> are a couple of great resources for this. </li>
