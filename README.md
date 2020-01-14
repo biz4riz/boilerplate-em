@@ -70,14 +70,20 @@ A boilerplate used to create a basic email using html tables. The file index.htm
 ```
 <h3>Getting Started</h3>
 <ul>
-<li>The main email container should not exceed 650px. This will allow the email to be viewed properly across all email clients.  </li>
-<li>The email structure is built strictly in tables. Nested tables are used to create complex structures within a complicated layout.</li>
-<li>Keep the CSS simple. Avoid shorthand css code and complex selectors such as nth-child, last-of-type and pseudo-elements. </li>
-<li>Use inline CSS styles.</li>
-<li>Do not use javascript or flash as they are not supported by email clients.</li>
-<li>Do not embed video. Linked images or text links that direct the user to a hosted video is the best way to showcase video within an email. Embedded video is not supported by email clients.</li>
-<li>Avoid the use of background images. The use of background images is not supported within all email clients. </li>
-<li>Test the email. It is a must to preview the coded email within all email clients before confidently sending out a campaign. <a href="https://www.emailonacid.com/" target="_blank">Email on Acid</a> and <a href="https://litmus.com/" target="_blank">Litmus</a> are a couple of great resources for this. </li>
+<li>Standard email width is 600px. The main email container should not exceed 640px to be to be viewed properly across all email clients.</li>
+<li>Use tables and tables only! Divs are problematic and can create display errors in finicky email clients such as Outlook. Nested tables are used to create complex structures within a complicated layout.</li>
+<li>Use inline CSS styles and keep it simple. Avoid shorthand css code and complex selectors!! This bloats your code and may cause erors and display issues in various email clients.</li>
+<li>Do not use forms, javascript or flash ... if you are into that sort of thing :/ ... as they are not supported by email clients.</li>
+<li>Do not embed video! Linked images or text links that direct the user to a hosted video is the best way to showcase video within an email. Embedded video is not supported by email clients.</li>
+<li>Avoid the use of background images. The use of background images is not supported within all email clients. If you are going to use them, make sure you have a fallback and it is tested!</li>
+	<li>
+		Simple sematics count
+		<ul>
+			<li><b>Strong tags:</b> The ```html<strong>``` tag is not supported by older email clients use the ```html<b>``` tag instead.</li>
+			<li>The ```html<ul>``` isn't supported very well in email clients such as Outlook and should be avoided and replaced with ```html&bull;``` for each point in the list.</li>
+		</ul>
+	</li>
+<li>Test the email. It is a must to preview the coded email within all email clients before confidently sending out a campaign. <a href="https://www.emailonacid.com/" target="_blank">Email on ADid</a> and <a href="https://litmus.com/" target="_blank">Litmus</a> are a couple of great resources for this. </li>
 </ul>
 
 <h3>Content Blocks</h3>
