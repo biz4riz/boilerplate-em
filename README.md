@@ -1,21 +1,38 @@
 # Email Boilerplate
-A boilerplate used to create a basic email using html tables. The file index.html includes various layouts and options when creating an email. The file base.html is a stripped down template and can be used as a starting point. 
+A boilerplate used to create a basic email using html tables. The file index.html includes various layouts and options when creating an email. The file base.html is a stripped down template and can be used as a starting point. Here is an <a href="https://app.emailonacid.com/app/acidtest/ObKInOgLdiAk5lPB0mYZPGTNqCGhZJ903ZvEPbuKVypEK/list" target="blank">Email on Acid client summary</a> for the base email in this project 
 
 <h3>Styles</h3>
 ```html
 <style>
-	
+
+	// Since we are using th for the split columns we need to reset the font styles
+  th { 
+    font-weight: normal;
+    text-align: left; 
+  }
+
+	// MOBILE STYLES: Adjust the max-width to match the width of the email
+
 	@media screen and (max-width: 600px) {
 
+		
+		// adds 5% padding on either side of content that may have a fixed width on desktop
+	    td.width5 {
+	    	height:auto !important;
+	    	width:5% !important; 
+	    }
+
 		// used to split columns on smaller devices
-	    td[class=split] {
+		// Do not use attribut selectors such as this: td[class=split]Gmail does not support attribute selectors and most pseudo-classes.
+		// Using table headings for split columns works better then td for global support
+	    th.split {
 	    	float: left;
 	    	height:auto !important;
 	    	width:100% !important; 
 	    }
 
 		// split columns and add bottom border on smaller devices
-	    td[class=split-border] {
+	    th.split-border {
 		    border-right: none !important;
 		    border-bottom: 1px solid #ffffff !important;
 	    	float: left;
@@ -24,7 +41,7 @@ A boilerplate used to create a basic email using html tables. The file index.htm
 	    }
 
 		// used to split columns and align center on smaller devices	
-	    td[class=split-center] {
+	    th.split-center {
 	    	float: left;
 	    	height:auto !important;
 	    	text-align: center !important;
@@ -32,7 +49,7 @@ A boilerplate used to create a basic email using html tables. The file index.htm
 	    }
 
 		// used to split columns and add spacing between columns on smaller devices	
-	    td[class=split-spacer] {
+	    th.split-spacer {
 	    	float: left;
 	    	font-size: 20px;
 	    	height: 20px !important;
@@ -47,24 +64,37 @@ A boilerplate used to create a basic email using html tables. The file index.htm
 	    	height:auto !important;
 	    	width:100% !important; 
 	    }
-		
-		// adds 5% padding on either side of content that may have a fixed width on desktop
-	    td[class=width5] {
-	    	height:auto !important;
-	    	width:5% !important; 
-	    }
 	}
-	
-	// customize phone, date and location link color on apple devices	
-	/* APPLE LINKS */
-	.apple_link a {
-		color: #141414;
-		text-decoration: underline;
-	}
-	.apple_link_white a {
-		color: #ffffff;
-		text-decoration: underline;
-	}
+
+	// Links include Gmail and Apple attributes
+  /* LINKS */
+	/* Default link colors and attributes */
+  p a,
+  span a,
+  u + #body span a:link, 
+  u + #body span a:active, 
+  u + #body p a, 
+  u + #body p a:link, 
+  u + #body p a:active,
+  #MessageViewBody p a, 
+  a[x-apple-data-detectors] {
+    color:#141414 !important; 
+    text-decoration:underline !important;
+    font-weight: bold !important;
+  }
+
+	/* Secondary link colors and attributes */
+  p a.link-white,
+  span a.link-white,
+  u + #body span a.link-white:link, 
+  u + #body span a.link-white:active, 
+  u + #body p a.link-white, 
+  u + #body p a.link-white:link, 
+  u + #body p a.link-white:active,
+  #MessageViewBody p a.link-white, 
+  span.link-white a[x-apple-data-detectors] {
+    color:#ffffff !important; 
+  }
 
 </style>
 ```
@@ -97,13 +127,13 @@ Example:
 			<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 				<tr>
 
-					// Adding 5% padding on either side of the content block
+					// Adding 5% padding on either side of the content block.
 
-					<td width="5%">&nbsp;</td>
+					<td width="40" class="width5">&nbsp;</td>
 					<td>
 						[ADD CONTENT HERE]
 					</td>
-					<td width="5%">&nbsp;</td>
+					<td width="40" class="width5">&nbsp;</td>
 				</tr>
 			</table>
 		</td>
@@ -128,7 +158,7 @@ Example:
 	// Address formatted using <br />
 	// Custom link color added for address on apple devices	using <span class="apple_link">
 
-	<p style="line-height:16px; margin:0;"><span class="apple_link">[ADDRESS LINE 1]<br />[ADDRESS LINE 2]</span></p>
+	<p style="line-height:16px; margin:0;"><span class="link-white">[ADDRESS LINE 1]<br />[ADDRESS LINE 2]</span></p>
 ```
 
 <h3>Lists</h3>
@@ -208,6 +238,7 @@ HTML buttons do render a bit differently in each email client. The differences a
 Example:
 
 ```html
+<<<<<<< Updated upstream
   <tr>
     <td align="center">
       <div>
@@ -221,6 +252,21 @@ Example:
       </div>
     </td>
   </tr>
+=======
+
+<td align="left">
+	<!-- Bulletproof Button Outline (https://buttons.cm/). Update the button url and button text in both the [if mso]code snippet and the regular a tag. 
+	-->
+	<div><!--[if mso]>
+		<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" class="btn-outline" href="tel:5555555555" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="86%" strokecolor="#ffffff" fillcolor="#00c3b4">
+			<w:anchorlock/>
+			<center style="color:#D31245;font-family:sans-serif;font-size:16px;font-weight:normal;">Bulletproff Button</center>
+		</v:roundrect>
+	<![endif]--><a class="btn-outline" href="tel:5555555555"
+	style="background-color:#00c3b4;border:1px solid #00c3b4;border-radius:30px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:normal;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Bulletproff Button</a></div>
+	<!-- end bulletproof button -->
+</td>
+>>>>>>> Stashed changes
 ```
 
 <h3>Spacing</h3>
@@ -249,7 +295,7 @@ Example:
 			
 			// Adding 20px column spacer to right side of column 1
 			
-			<td class="split" width="50%">
+			<th class="split" width="50%">
 				<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 					<tr>
 						<td>[COLUMN BLOCK CONTENT HERE]</td>
@@ -257,13 +303,13 @@ Example:
 						<td width="20">&nbsp;</td>
 					</tr>
 				</table>
-			</td>
+			</th>
 			
 			<!-- COLUMN 2 - BG COLOR / SPACER LEFT AND RIGHT -->
 			
 			// Adding 20px column spacer to both sides of column 2
 			
-			<td class="split" style="background:#ebebeb;" width="50%">
+			<th class="split" style="background:#ebebeb;" width="50%">
 				<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 					<tr>
 						// spacer
@@ -273,14 +319,14 @@ Example:
 						<td width="20">&nbsp;</td>
 					</tr>
 				</table>
-			</td>
+			</th>
 		</tr>
 	</table>
 	
 ```
 
 <h3>Splitting Columns</h3>
-It is necessary to split columns on smaller devices so the content doesn't become squished and unreadable. You can achieve this by adding the class .split. Since email tags won't handle multiple classes various split classes have been created to accommodate the most common scenarios. 
+It is necessary to split columns on smaller devices so the content doesn't become squished and unreadable. It is best to use a table heading (th) instead of a table column (td) in this situation if you want the email to render properly in each email client. You can achieve this by adding the class .split to the table heading. Since email tags won't handle multiple classes various split classes have been created to accommodate the most common scenarios. 
 
 Example:
 
@@ -289,20 +335,20 @@ Example:
 	
 	// Adding default .split class to make columns width: 100% @media screen and (max-width: 600px)
 	
-	<td class="split" width="50%">
+	<th class="split" width="50%">
 		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td>[COLUMN BLOCK CONTENT HERE]</td>
 				<td width="20">&nbsp;</td>
 			</tr>
 		</table>
-	</td>
+	</th>
 	
 	<!-- SPLIT W BORDERS -->
 	
 	// Removing border-right and adding border bottom @media screen and (max-width: 600px) while maintaing default split styles
 	
-	<td class="split-border" width="33.3%" style="background:#333333; border-right:1px solid #fff;">
+	<th class="split-border" width="33.3%" style="background:#333333; border-right:1px solid #fff;">
 		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td width="20">&nbsp;</td>
@@ -310,13 +356,13 @@ Example:
 				<td width="20">&nbsp;</td>
 			</tr>
 		</table>
-	</td>
+	</th>
 	
 	<!-- SPLIT SPACER -->
 	
 	// Modifying column spacer to act like a row spacer under the first column @media screen and (max-width: 600px)
 	
-	<td class="split" width="50%">
+	<th class="split" width="50%">
 		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td class="split">
@@ -330,12 +376,12 @@ Example:
 				<td class="split-spacer" width="20">&nbsp;</td>
 			</tr>
 		</table>
-	</td>
-	<td class="split" width="50%">
+	</th>
+	<th class="split" width="50%">
 		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
 				<td>[COLUMN BLOCK CONTENT HERE]</td>
 			</tr>
 		</table>
-	</td>
+	</th>
 ```

@@ -7,17 +7,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <style>
+  th { 
+    font-weight: normal;
+    text-align: left; 
+  }
 	
-	/* MOBILE STYLES */
+	/* MOBILE STYLES */  
 	@media screen and (max-width: 600px) {
 	
-	    td[class=split] {
+			td.width5 {
+				height:auto !important;
+				width:5% !important; 
+			}
+	
+	    th.split {
 	    	float: left;
 	    	height:auto !important;
 	    	width:100% !important; 
 	    }
 	
-	    td[class=split-border] {
+	    th.split-border {
 		    border-right: none !important;
 		    border-bottom: 1px solid #ffffff !important;
 	    	float: left;
@@ -25,14 +34,14 @@
 	    	width:100% !important; 
 	    }
 	
-	    td[class=split-center] {
+	    th.split-center {
 	    	float: left;
 	    	height:auto !important;
 	    	text-align: center !important;
 	    	width:100% !important; 
 	    }
 	
-	    td[class=split-spacer] {
+	    th.split-spacer {
 	    	float: left;
 	    	font-size: 20px;
 	    	height: 20px !important;
@@ -41,27 +50,40 @@
 	    }
 	}
 	@media screen and (max-width: 650px) {
-	    table[class=wrap100], img[class=wrap100] {
+	    table.wrap100, img.wrap100 {
 	    	height:auto !important;
 	    	width:100% !important; 
 	    }
-	
-	    td[class=width5] {
-	    	height:auto !important;
-	    	width:5% !important; 
-	    }
-	}
-		
-	/* APPLE LINKS */
-	.apple_link a {
-		color: #141414;
-		text-decoration: underline;
-	}
-	.apple_link_white a {
-		color: #ffffff;
-		text-decoration: underline;
 	}
 
+  /* LINKS */
+	/* Default link colors and attributes */
+  p a,
+  span a,
+  u + #body span a:link, 
+  u + #body span a:active, 
+  u + #body p a, 
+  u + #body p a:link, 
+  u + #body p a:active,
+  #MessageViewBody p a, 
+  a[x-apple-data-detectors] {
+    color:#141414 !important; 
+    text-decoration:underline !important;
+    font-weight: bold !important;
+  }
+
+	/* Secondary link colors and attributes */
+  p a.link-white,
+  span a.link-white,
+  u + #body span a.link-white:link, 
+  u + #body span a.link-white:active, 
+  u + #body p a.link-white, 
+  u + #body p a.link-white:link, 
+  u + #body p a.link-white:active,
+  #MessageViewBody p a.link-white, 
+  span.link-white a[x-apple-data-detectors] {
+    color:#ffffff !important; 
+  }
 </style>
 
 </head>
@@ -87,7 +109,7 @@
 								<td style="border-bottom:1px solid #e0e0e0;">
 									<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="5%">&nbsp;</td>
+											<td width="40" class="width5">&nbsp;</td>
 											<td>
 												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">																								<!-- FULLWIDTH CONTENT -->
 													<tr>
@@ -110,7 +132,7 @@
 													<tr><td height="35" style="font-size:35px; line-height:35px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
 												</table>
 											</td>
-											<td width="5%">&nbsp;</td>
+											<td width="40" class="width5">&nbsp;</td>
 										</tr>
 									</table>
 								</td>
@@ -121,7 +143,7 @@
 								<td>
 									<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="5%">&nbsp;</td>
+											<td width="40" class="width5">&nbsp;</td>
 											<td>
 												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">											
 													<!-- 2 COLUMNS -->
@@ -130,10 +152,10 @@
 															<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 																<tr valign="top">
 																	<!-- COLUMN 1 - CONTENT / CTA BUTTON / SPACER RIGHT -->
-																	<td class="split" width="50%">
+																	<th class="split" width="50%">
 																		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tr>
-																				<td class="split">
+																				<th class="split">
 																					<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 																						<tr>
 																							<td style="color:#141414; font-family:Arial, Helvetica, sans-serif; font-size:22px;">
@@ -148,19 +170,28 @@
 																						</tr>
 																						<tr><td height="15" style="font-size:15px; line-height:15px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
 																						<tr>
-																							<td>
-																								<a href="#" style="background-color:#00c3b4; border:1px solid #00c3b4; border-radius:4px; color:#ffffff; display:inline-block; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; line-height:40px; text-align:center; text-decoration:none; width:200px; -webkit-text-size-adjust:none; mso-hide:all;">Show me the button!</a>
+																							<td align="left">
+																								<!-- Bulletproof Button Outline (https://buttons.cm/). Update the button url and button text in both the [if mso]code snippet and the regular a tag. 
+																								-->
+																								<div><!--[if mso]>
+																									<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" class="btn-outline" href="tel:5555555555" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="86%" strokecolor="#ffffff" fillcolor="#00c3b4">
+																										<w:anchorlock/>
+																										<center style="color:#D31245;font-family:sans-serif;font-size:16px;font-weight:normal;">Bulletproff Button</center>
+																									</v:roundrect>
+																								<![endif]--><a class="btn-outline" href="tel:5555555555"
+																								style="background-color:#00c3b4;border:1px solid #00c3b4;border-radius:30px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:normal;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Bulletproff Button</a></div>
+																								<!-- end bulletproof button -->
 																							</td>
 																						</tr>
 																						<tr><td height="15" style="font-size:15px; line-height:15px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
 																					</table>
-																				</td>
-																				<td class="split-spacer" width="20">&nbsp;</td>
+																				</th>
+																				<th class="split-spacer" width="20">&nbsp;</th>
 																			</tr>
 																		</table>
-																	</td>
+																	</th>
 																	<!-- COLUMN 2 - BG COLOR / SPACER RIGHT AND LEFT -->
-																	<td class="split" style="background:#ebebeb;" width="50%">
+																	<th class="split" style="background:#ebebeb;" width="50%">
 																		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tr>
 																				<td width="20">&nbsp;</td>
@@ -224,7 +255,7 @@
 																				<td width="20">&nbsp;</td>
 																			</tr>
 																		</table>
-																	</td>
+																	</th>
 																</tr>
 															</table>
 														</td>
@@ -269,7 +300,7 @@
 													</tr>
 												</table>
 											</td>
-											<td width="5%">&nbsp;</td>
+											<td width="40" class="width5">&nbsp;</td>
 										</tr>
 									</table>
 								</td>
@@ -281,7 +312,7 @@
 									<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr valign="top">
 											<!-- COLUMN 1 -->
-											<td class="split-border" width="33.3%" style="background:#333333; border-right:1px solid #fff;">
+											<th class="split-border" width="33.3%" style="background:#333333; border-right:1px solid #fff;">
 												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
 														<td width="20">&nbsp;</td>
@@ -296,19 +327,19 @@
 																<tr><td height="25" style="font-size:25px; line-height:25px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
 																<tr>
 																	<td style="color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
-																		<p style="line-height:16px; margin:0;"><a href="#" style="color:#00c3b4; text-decoration:underline;">Sollicitudin Inceptos Tortor</a></p>
+																		<p style="line-height:16px; margin:0;"><a href="#" class="link-white">Sollicitudin Inceptos Tortor</a></p>
 																	</td>
 																</tr>
 																<tr><td height="10" style="font-size:10px; line-height:10px; mso-line-height-rule:exactly;">&nbsp;</td></tr>  
 																<tr>
 																	<td style="color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
-																		<p style="line-height:16px; margin:0;"><a href="#" style="color:#00c3b4; text-decoration:underline;">Adipiscing Aenean Amet</a></p>
+																		<p style="line-height:16px; margin:0;"><a href="#" class="link-white">Adipiscing Aenean Amet</a></p>
 																	</td>
 																</tr>
 																<tr><td height="10" style="font-size:10px; line-height:10px; mso-line-height-rule:exactly;">&nbsp;</td></tr>  
 																<tr>
 																	<td style="color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
-																		<p style="line-height:16px; margin:0;"><a href="#" style="color:#00c3b4; text-decoration:underline;">Sem Cursus Nullam</a></p>
+																		<p style="line-height:16px; margin:0;"><a href="#" class="link-white">Sem Cursus Nullam</a></p>
 																	</td>
 																</tr>
 																<tr><td height="25" style="font-size:25px; line-height:25px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
@@ -317,9 +348,9 @@
 														<td width="20">&nbsp;</td>
 													</tr>
 												</table>
-											</td>
+											</th>
 											<!-- COLUMN 2 -->
-											<td class="split-border" width="33.3%" style="background:#333333; border-right:1px solid #fff;">
+											<th class="split-border" width="33.3%" style="background:#333333; border-right:1px solid #fff;">
 												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
 														<td width="20">&nbsp;</td>
@@ -340,13 +371,13 @@
 																<tr><td height="10" style="font-size:10px; line-height:10px; mso-line-height-rule:exactly;">&nbsp;</td></tr>  
 																<tr>
 																	<td style="color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
-																		<p style="line-height:16px; margin:0;"><span class="apple_link_white">12345 W. This Way<br />City, ST 88888</span></p>
+																		<p style="line-height:16px; margin:0;"><span class="link-white">12345 W. This Way<br />City, ST 88888</span></p>
 																	</td>
 																</tr>
 																<tr><td height="15" style="font-size:15px; line-height:15px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
 																<tr>
 																	<td style="color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
-																		<p style="line-height:16px; margin:0;"><a href="#" style="color:#00c3b4; text-decoration:underline;">Euismod</a></p>
+																		<p style="line-height:16px; margin:0;"><a href="#" class="link-white">Euismod</a></p>
 																	</td>
 																</tr>
 																<tr><td height="25" style="font-size:25px; line-height:25px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
@@ -355,9 +386,9 @@
 														<td width="20">&nbsp;</td>
 													</tr>
 												</table>
-											</td>
+											</th>
 											<!-- COLUMN 3 -->
-											<td class="split" width="33.3%" style="background:#333333;">
+											<th class="split" width="33.3%" style="background:#333333;">
 												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
 														<td width="20">&nbsp;</td>
@@ -372,7 +403,7 @@
 																<tr><td height="25" style="font-size:25px; line-height:25px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
 																<tr>
 																	<td style="color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:13px;">
-																		<p style="line-height:16px; margin:0;">Vestibulum id ligula porta felis euismod semper. Cras mattis <a href="#" style="color:#00c3b4; text-decoration:underline;">consectetur</a> purus sit amet fermentum.</p>
+																		<p style="line-height:16px; margin:0;">Vestibulum id ligula porta felis euismod semper. Cras mattis <a href="#" class="link-white">consectetur</a> purus sit amet fermentum.</p>
 																	</td>
 																</tr>
 																<tr><td height="25" style="font-size:25px; line-height:25px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
@@ -381,7 +412,7 @@
 														<td width="20">&nbsp;</td>
 													</tr>
 												</table>
-											</td>
+											</th>
 										</tr>
 									</table>
 								</td>
@@ -391,7 +422,7 @@
 								<td style="background:#d7ffa5;">
 									<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="5%">&nbsp;</td>
+											<td width="40" class="width5">&nbsp;</td>
 											<td>
 												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr><td height="30" style="line-height:30px; font-size:30px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
@@ -399,7 +430,7 @@
 														<td>
 															<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 																<tr valign="middle">
-																	<td class="split" width="">
+																	<th class="split" width="">
 																		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tr>
 																				<td style="color:#141414; font-family:Arial, Helvetica, sans-serif; font-size:20px; font-weight:bold; text-align:center;">
@@ -412,18 +443,26 @@
 																				</td>
 																			</tr>
 																		</table>
-																	</td>
-																	<td class="split-spacer" width="20">
-																	</td>
-																	<td class="split">
+																	</th>
+																	<th class="split-spacer" width="20">&nbsp;</th>
+																	<th class="split">
 																		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tr>
-																				<td style="text-align:center;">
-																					<a href="#" style="background-color:transparent; border:1px solid #141414; border-radius:4px; color:#141414; display:inline-block; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; line-height:40px; text-align:center; text-decoration:none; width:200px; -webkit-text-size-adjust:none; mso-hide:all;">Show me the button!</a>
+																				<td align="center">
+																					<!-- Bulletproof Button Outline (https://buttons.cm/). Update the button url and button text in both the [if mso]code snippet and the regular a tag. 
+																					-->
+																					<div><!--[if mso]>
+																						<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" class="btn-outline" href="tel:5555555555" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="86%" strokecolor="#141414" fillcolor="#d7ffa5">
+																							<w:anchorlock/>
+																							<center style="color:#D31245;font-family:sans-serif;font-size:16px;font-weight:normal;">Bulletproff Button</center>
+																						</v:roundrect>
+																					<![endif]--><a class="btn-outline" href="tel:5555555555"
+																					style="background-color:#d7ffa5;border:1px solid #141414;border-radius:30px;color:#141414;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:normal;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Bulletproff Button</a></div>
+																					<!-- end bulletproof button -->
 																				</td>
 																			</tr>
 																		</table>
-																	</td>
+																	</th>
 																</tr>
 															</table>
 														</td>
@@ -431,7 +470,7 @@
 													<tr><td height="30" style="line-height:30px; font-size:30px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
 												</table>
 											</td>
-											<td width="5%">&nbsp;</td>
+											<td width="40" class="width5">&nbsp;</td>
 										</tr>
 									</table>
 								</td>
@@ -520,7 +559,7 @@
 								<td>
 									<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td width="5%">&nbsp;</td>
+											<td width="40" class="width5">&nbsp;</td>
 											<td>
 												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
@@ -530,7 +569,7 @@
 													</tr>
 												</table>
 											</td>
-											<td width="5%">&nbsp;</td>
+											<td width="40" class="width5">&nbsp;</td>
 										</tr>
 									</table>
 								</td>
@@ -567,40 +606,46 @@
 						<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 							<tr>
 								<td class="width5" width="1">&nbsp;</td>
-								<td class="split-center">
+								<td>
 									<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 										<tr>
-											<td style="color:#707070; font-family:Helvetica, Arial, sans-serif; font-size:13px;">
-												<p style="line-height:16px; margin:0;">&copy; [YEAR] [COMPANY NAME] </p>
-											</td>
-										</tr>
-									</table>
-								</td>
-								<td class="split-spacer" width="50">&nbsp;</td>
-								<td class="split-center" width="178">
-									<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-										<tr>
-											<td>
+											<th class="split-center">
+												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+													<tr>
+														<td style="color:#707070; font-family:Helvetica, Arial, sans-serif; font-size:13px;">
+															<p style="line-height:16px; margin:0;">&copy; [YEAR] [COMPANY NAME] </p>
+														</td>
+													</tr>
+												</table>
+											</th>
+											<th class="split-spacer" width="50">&nbsp;</th>
+											<th class="split-center" width="178">
 												<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 													<tr>
 														<td>
 															<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 																<tr>
-																	<td></td>
-																	<td width="35"><a href="#" target="_blank"><img src="http://placehold.it/35x35/3b5998/ffffff&text=F" alt="Like [COMPANY NAME] on Facebook" /></a></td>
-																	<td width="15">&nbsp;</td>
-																	<td width="35"><a href="#" target="_blank"><img src="http://placehold.it/35x35/326ADA/ffffff&text=T" alt="Follow [COMPANY NAME] on Twitter" /></a></td>
-																	<td width="15">&nbsp;</td>
-																	<td width="35"><a href="#" target="_blank"><img src="http://placehold.it/35x35/4C68D7/ffffff&text=IG" alt="Follow [COMPANY NAME] on Instagram" /></a></td>
-																	<td width="15">&nbsp;</td>
-																	<td width="35"><a href="#" target="_blank"><img src="http://placehold.it/35x35/0077B5/ffffff&text=L" alt="Connect with [COMPANY NAME] on Linkedin" /></a></td>
-																	<td></td>
+																	<td>
+																		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+																			<tr>
+																				<td></td>
+																				<td width="35"><a href="#" target="_blank"><img src="http://placehold.it/35x35/3b5998/ffffff&text=F" alt="Like [COMPANY NAME] on Facebook" /></a></td>
+																				<td width="15">&nbsp;</td>
+																				<td width="35"><a href="#" target="_blank"><img src="http://placehold.it/35x35/326ADA/ffffff&text=T" alt="Follow [COMPANY NAME] on Twitter" /></a></td>
+																				<td width="15">&nbsp;</td>
+																				<td width="35"><a href="#" target="_blank"><img src="http://placehold.it/35x35/4C68D7/ffffff&text=IG" alt="Follow [COMPANY NAME] on Instagram" /></a></td>
+																				<td width="15">&nbsp;</td>
+																				<td width="35"><a href="#" target="_blank"><img src="http://placehold.it/35x35/0077B5/ffffff&text=L" alt="Connect with [COMPANY NAME] on Linkedin" /></a></td>
+																				<td></td>
+																			</tr>
+																		</table>
+																	</td>
 																</tr>
 															</table>
 														</td>
 													</tr>
 												</table>
-											</td>
+											</th>
 										</tr>
 									</table>
 								</td>
