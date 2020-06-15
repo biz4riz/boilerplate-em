@@ -206,6 +206,8 @@ Example:
 <tr>
 	<td>
 		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+			
+			// List Item 
 			<tr>
 				<td>
 					// Must use a nested table to avoid colspan issues
@@ -222,7 +224,11 @@ Example:
 					</table>
 				</td>
 			</tr>
+			
+			// Spacer
 			<tr><td height="5" style="font-size:5px; line-height:5px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
+			
+			// List Item
 			<tr>
 				<td>
 					<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -235,7 +241,11 @@ Example:
 					</table>
 				</td>
 			</tr>
+			
+			// Spacer
 			<tr><td height="5" style="font-size:5px; line-height:5px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
+
+			// List Item
 			<tr>
 				<td>
 					<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -248,6 +258,7 @@ Example:
 					</table>
 				</td>
 			</tr>
+			
 		</table>
 	</td>
 </tr>
@@ -276,16 +287,16 @@ It is best to use HTML buttons in your emails so you don't loose your CTA if the
 
 ```html
 <td align="left">
-	<!-- Bulletproof Button Outline (https://buttons.cm/). Update the button url and button text in both the [if mso]code snippet and the regular a tag. 
-	-->
-	<div><!--[if mso]>
-		<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" class="btn-outline" href="tel:5555555555" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="86%" strokecolor="#ffffff" fillcolor="#00c3b4">
-			<w:anchorlock/>
-			<center style="color:#D31245;font-family:sans-serif;font-size:16px;font-weight:normal;">Bulletproff Button</center>
-		</v:roundrect>
-	<![endif]--><a class="btn-outline" href="tel:5555555555"
-	style="background-color:#00c3b4;border:1px solid #00c3b4;border-radius:30px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:normal;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Bulletproff Button</a></div>
-	<!-- end bulletproof button -->
+<!-- Bulletproof Button Outline (https://buttons.cm/). Update the button url and button text in both the [if mso]code snippet and the regular a tag. 
+-->
+<div><!--[if mso]>
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" class="btn-outline" href="tel:5555555555" style="height:40px;v-text-anchor:middle;width:200px;" arcsize="86%" strokecolor="#ffffff" fillcolor="#00c3b4">
+<w:anchorlock/>
+<center style="color:#D31245;font-family:sans-serif;font-size:16px;font-weight:normal;">Bulletproff Button</center>
+</v:roundrect>
+<![endif]--><a class="btn-outline" href="tel:5555555555"
+style="background-color:#00c3b4;border:1px solid #00c3b4;border-radius:30px;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:normal;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;mso-hide:all;">Bulletproff Button</a></div>
+<!-- end bulletproof button -->
 </td>
 ```
 
@@ -294,19 +305,20 @@ Adding padding and margins within an email can be tricky. Some clients will rend
 
 **Example:**
 
+Header Image 
+
 ```html
-	
-	<!-- HEADER IMAGE -->
-	
-	// Adding 35px spacer row beneath header image
-	
-	<tr>
-		<td><img class="wrap100" src="[IMAGE SOURCE HERE]" alt="[ALT TEXT HERE]" style="display:block;" border="0" height="300" width="650" /></td>
-	</tr>
-	// spacer
-	<tr><td height="35" style="font-size:35px; line-height:35px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
-	
-	<!-- 2 COLUMNS -->
+// Adding 35px spacer row beneath header image
+<tr>
+<td><img class="wrap100" src="[IMAGE SOURCE HERE]" alt="[ALT TEXT HERE]" style="display:block;" border="0" height="300" width="650" /></td>
+</tr>
+// spacer
+<tr><td height="35" style="font-size:35px; line-height:35px; mso-line-height-rule:exactly;">&nbsp;</td></tr>
+```	
+
+2 Columns
+
+``` html
 	
 	<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 		<tr valign="top">	
@@ -342,7 +354,6 @@ Adding padding and margins within an email can be tricky. Some clients will rend
 			</th>
 		</tr>
 	</table>
-	
 ```
 
 ## Splitting Columns
@@ -351,11 +362,9 @@ It is necessary to split columns on smaller devices so the content doesn't becom
 
 **Example:**
 
+Default Split: Adding default .split class to make columns width: 100% @media screen and (max-width: 600px)
+
 ```html
-	<!-- DEFAULT SPLIT -->
-	
-	// Adding default .split class to make columns width: 100% @media screen and (max-width: 600px)
-	
 	<th class="split" width="50%">
 		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
@@ -364,11 +373,11 @@ It is necessary to split columns on smaller devices so the content doesn't becom
 			</tr>
 		</table>
 	</th>
-	
-	<!-- SPLIT W BORDERS -->
-	
-	// Removing border-right and adding border bottom @media screen and (max-width: 600px) while maintaing default split styles
-	
+```
+
+Split Columns with Bottom Border: Removing border-right and adding border bottom @media screen and (max-width: 600px) while maintaing default split styles
+
+``` html
 	<th class="split-border" width="33.3%" style="background:#333333; border-right:1px solid #fff;">
 		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
@@ -378,11 +387,11 @@ It is necessary to split columns on smaller devices so the content doesn't becom
 			</tr>
 		</table>
 	</th>
-	
-	<!-- SPLIT SPACER -->
-	
-	// Modifying column spacer to act like a row spacer under the first column @media screen and (max-width: 600px)
-	
+```	
+
+Split Columns with Content Spacer: Modifying column spacer to act like a row spacer under the first column @media screen and (max-width: 600px)
+
+```html
 	<th class="split" width="50%">
 		<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
 			<tr>
