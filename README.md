@@ -64,7 +64,6 @@ Use base.html to get started on your own project!
 		}
 	}
 
-	// Links include Gmail and Apple attributes
   // LINKS: Default link colors and attributes
   p a,
   span a,
