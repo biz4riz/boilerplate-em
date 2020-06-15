@@ -6,6 +6,7 @@ Use base.html to get started on your own project!
 <h3>Styles</h3>
 ```html
 <style>
+
   th { 
     font-weight: normal;
     text-align: left; 
@@ -64,8 +65,7 @@ Use base.html to get started on your own project!
 	}
 
 	// Links include Gmail and Apple attributes
-  /* LINKS */
-	/* Default link colors and attributes */
+  // LINKS: Default link colors and attributes
   p a,
   span a,
   u + #body span a:link, 
@@ -80,7 +80,7 @@ Use base.html to get started on your own project!
     font-weight: bold !important;
   }
 
-	/* Secondary link colors and attributes */
+	// LINKS: Default link colors and attributes
   p a.link-white,
   span a.link-white,
   u + #body span a.link-white:link, 
