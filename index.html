@@ -7,10 +7,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <style>
-  th { 
-    font-weight: normal;
-    text-align: left; 
-  }
+	th { 
+		font-weight: normal;
+		text-align: left; 
+	}
+
+	/* LINKS: Default link colors and attributes */
+	p a,
+	span a,
+	u + #body span a:link, 
+	u + #body span a:active, 
+	u + #body p a, 
+	u + #body p a:link, 
+	u + #body p a:active,
+	#MessageViewBody p a, 
+	a[x-apple-data-detectors] {
+		color:#141414 !important; 
+		text-decoration:underline !important;
+		font-weight: bold !important;
+	}
+		
+	/* LINKS: Secondary link colors and attributes */
+	p a.link-white,
+	span a.link-white,
+	u + #body span a.link-white:link, 
+	u + #body span a.link-white:active, 
+	u + #body p a.link-white, 
+	u + #body p a.link-white:link, 
+	u + #body p a.link-white:active,
+	#MessageViewBody p a.link-white, 
+	span.link-white a[x-apple-data-detectors] {
+		color:#ffffff !important; 
+	}
 	
 	/* MOBILE STYLES */  
 	@media screen and (max-width: 600px) {
@@ -49,41 +77,13 @@
 	    	width:100% !important; 
 	    }
 	}
+
 	@media screen and (max-width: 650px) {
 	    table.wrap100, img.wrap100 {
 	    	height:auto !important;
 	    	width:100% !important; 
 	    }
 	}
-
-  /* LINKS */
-	/* Default link colors and attributes */
-  p a,
-  span a,
-  u + #body span a:link, 
-  u + #body span a:active, 
-  u + #body p a, 
-  u + #body p a:link, 
-  u + #body p a:active,
-  #MessageViewBody p a, 
-  a[x-apple-data-detectors] {
-    color:#141414 !important; 
-    text-decoration:underline !important;
-    font-weight: bold !important;
-  }
-
-	/* Secondary link colors and attributes */
-  p a.link-white,
-  span a.link-white,
-  u + #body span a.link-white:link, 
-  u + #body span a.link-white:active, 
-  u + #body p a.link-white, 
-  u + #body p a.link-white:link, 
-  u + #body p a.link-white:active,
-  #MessageViewBody p a.link-white, 
-  span.link-white a[x-apple-data-detectors] {
-    color:#ffffff !important; 
-  }
 </style>
 
 </head>
