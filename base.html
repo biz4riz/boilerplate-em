@@ -7,25 +7,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <style>
+  th { 
+    font-weight: normal;
+    text-align: left; 
+  }
 	
-	/* MOBILE STYLES */
+	/* MOBILE STYLES */  
 	@media screen and (max-width: 600px) {
-	    table.wrap100, img.wrap100 {
-	    	height:auto !important;
-	    	width:100% !important; 
-	    }
+	
+			td.width5 {
+				height:auto !important;
+				width:5% !important; 
+			}
 	
 	    th.split {
 	    	float: left;
 	    	height:auto !important;
-	    	width:100% !important; 
-	    }
-	
-	    th.split-spacer {
-	    	float: left;
-	    	font-size: 20px;
-	    	height: 20px !important;
-	    	line-height: 20px;
 	    	width:100% !important; 
 	    }
 	
@@ -37,9 +34,19 @@
 	    	width:100% !important; 
 	    }
 	
-	    td.width5 {
+	    th.split-center {
+	    	float: left;
 	    	height:auto !important;
-	    	width:5% !important; 
+	    	text-align: center !important;
+	    	width:100% !important; 
+	    }
+	
+	    th.split-spacer {
+	    	float: left;
+	    	font-size: 20px;
+	    	height: 20px !important;
+	    	line-height: 20px;
+	    	width:100% !important; 
 	    }
 	}
 	@media screen and (max-width: 650px) {
@@ -48,13 +55,35 @@
 	    	width:100% !important; 
 	    }
 	}
-		
-	/* APPLE LINKS */
-	.apple_link a {
-		color: #141414;
-		text-decoration: underline;
-	}
 
+  /* LINKS */
+	/* Default link colors and attributes */
+  p a,
+  span a,
+  u + #body span a:link, 
+  u + #body span a:active, 
+  u + #body p a, 
+  u + #body p a:link, 
+  u + #body p a:active,
+  #MessageViewBody p a, 
+  a[x-apple-data-detectors] {
+    color:#141414 !important; 
+    text-decoration:underline !important;
+    font-weight: bold !important;
+  }
+
+	/* Secondary link colors and attributes */
+  p a.link-white,
+  span a.link-white,
+  u + #body span a.link-white:link, 
+  u + #body span a.link-white:active, 
+  u + #body p a.link-white, 
+  u + #body p a.link-white:link, 
+  u + #body p a.link-white:active,
+  #MessageViewBody p a.link-white, 
+  span.link-white a[x-apple-data-detectors] {
+    color:#ffffff !important; 
+  }
 </style>
 
 </head>
@@ -67,7 +96,7 @@
 <table class="wrap100" width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="background:#e1e1e1;">
 	<tr>
 		<td>
-			<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="650" style="position:relative;">
+			<table class="wrap100" align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="position:relative;">
 				<tr><td height="30" style="font-size:30px; line-height:30px; mso-line-height-rule:exactly;">&nbsp;</td></tr> 
 				<tr> 
 					<td style="background:#fff;">

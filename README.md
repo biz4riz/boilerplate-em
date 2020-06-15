@@ -1,69 +1,66 @@
 # Email Boilerplate
-A boilerplate used to create a basic email using html tables. The file index.html includes various layouts and options when creating an email. The file base.html is a stripped down template and can be used as a starting point. Here is an <a href="https://app.emailonacid.com/app/acidtest/ObKInOgLdiAk5lPB0mYZPGTNqCGhZJ903ZvEPbuKVypEK/list" target="blank">Email on Acid client summary</a> for the base email in this project 
+A boilerplate used to create a basic email using html tables. The file index.html includes various layouts and options when creating an email. The file base.html is a stripped down template and can be used as a starting point. Here is an <a href="https://app.emailonacid.com/app/acidtest/ObKInOgLdiAk5lPB0mYZPGTNqCGhZJ903ZvEPbuKVypEK/list" target="blank">Email on Acid client summary</a> for the base email in this project. 
+
+Use base.html to get started on your own project!
 
 <h3>Styles</h3>
 ```html
 <style>
-
-	// Since we are using th for the split columns we need to reset the font styles
   th { 
     font-weight: normal;
     text-align: left; 
   }
 
 	// MOBILE STYLES: Adjust the max-width to match the width of the email
-
 	@media screen and (max-width: 600px) {
-
-		
 		// adds 5% padding on either side of content that may have a fixed width on desktop
-	    td.width5 {
-	    	height:auto !important;
-	    	width:5% !important; 
-	    }
+		td.width5 {
+		height:auto !important;
+		width:5% !important; 
+		}
 
 		// used to split columns on smaller devices
 		// Do not use attribut selectors such as this: td[class=split]Gmail does not support attribute selectors and most pseudo-classes.
 		// Using table headings for split columns works better then td for global support
-	    th.split {
-	    	float: left;
-	    	height:auto !important;
-	    	width:100% !important; 
-	    }
+		th.split {
+		float: left;
+		height:auto !important;
+		width:100% !important; 
+		}
 
 		// split columns and add bottom border on smaller devices
-	    th.split-border {
-		    border-right: none !important;
-		    border-bottom: 1px solid #ffffff !important;
-	    	float: left;
-	    	height:auto !important;
-	    	width:100% !important; 
-	    }
+		th.split-border {
+		border-right: none !important;
+		border-bottom: 1px solid #ffffff !important;
+		float: left;
+		height:auto !important;
+		width:100% !important; 
+		}
 
 		// used to split columns and align center on smaller devices	
-	    th.split-center {
-	    	float: left;
-	    	height:auto !important;
-	    	text-align: center !important;
-	    	width:100% !important; 
-	    }
+		th.split-center {
+		float: left;
+		height:auto !important;
+		text-align: center !important;
+		width:100% !important; 
+		}
 
 		// used to split columns and add spacing between columns on smaller devices	
-	    th.split-spacer {
-	    	float: left;
-	    	font-size: 20px;
-	    	height: 20px !important;
-	    	line-height: 20px;
-	    	width:100% !important; 
-	    }
+		th.split-spacer {
+		float: left;
+		font-size: 20px;
+		height: 20px !important;
+		line-height: 20px;
+		width:100% !important; 
+		}
 	}
-	@media screen and (max-width: 650px) {
 
+	@media screen and (max-width: 650px) {
 		// makes tables and images 100% width 
-	    table[class=wrap100], img[class=wrap100] {
-	    	height:auto !important;
-	    	width:100% !important; 
-	    }
+		table[class=wrap100], img[class=wrap100] {
+		height:auto !important;
+		width:100% !important; 
+		}
 	}
 
 	// Links include Gmail and Apple attributes
@@ -95,7 +92,6 @@ A boilerplate used to create a basic email using html tables. The file index.htm
   span.link-white a[x-apple-data-detectors] {
     color:#ffffff !important; 
   }
-
 </style>
 ```
 <h3>Getting Started</h3>
